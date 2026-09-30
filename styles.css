@@ -2,11 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   width: 960px;
+  --grid-size: 16;
 }
 
 .square {
-  width: calc(960px / 16);
-  height: calc(960px / 16);
+  width: calc(960px / var(--grid-size));
+  height: calc(960px / var(--grid-size));
   box-sizing: border-box;
   border: 1px solid #ccc;
 }
