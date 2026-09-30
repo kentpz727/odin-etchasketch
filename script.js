@@ -8,10 +8,7 @@ function createGrid(size) {
     const square = document.createElement("div");
     square.classList.add("square");
     square.addEventListener("mouseover", () => {
-      square.style.backgroundColor = "#777777";
-    });
-    square.addEventListener("mouseout", () => {
-      square.style.backgroundColor = "";
+      square.style.backgroundColor = "#000000";
     });
     container.appendChild(square);
   }
