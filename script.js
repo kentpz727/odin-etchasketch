@@ -1,5 +1,13 @@
 const container = document.querySelector("#container");
 
+function getRandomColor() {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+
+  return `rgb(${red}, ${green}, ${blue})`;
+}
+
 function createGrid(size) {
   container.innerHTML = "";
   container.style.setProperty("--grid-size", size);
@@ -8,7 +16,7 @@ function createGrid(size) {
     const square = document.createElement("div");
     square.classList.add("square");
     square.addEventListener("mouseover", () => {
-      square.style.backgroundColor = "#000000";
+      square.style.backgroundColor = getRandomColor();
     });
     container.appendChild(square);
   }
